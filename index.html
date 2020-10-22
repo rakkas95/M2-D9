@@ -25,24 +25,180 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
 <html>
   <head>
     <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
     <style>
       /* PREVIOUS STUFF */
+      .album {
+        background-color: #eddcd2;
+      }
+
+      .card-body {
+        background-color: #ddbea9;
+        color: whitesmoke;
+      }
+
+      .navbar {
+        background-color: #a5a58d;
+      }
+
+      .jumbotron {
+        background-color: #f0efeb;
+      }
+
+      #favourite_albums {
+          color: white;
+      }
     </style>
   </head>
   <body>
     <!-- EXERCISE 1
         Use the specific bootstrap component to implement a Breadcrumb
         -->
+    <header>
+      <div class="navbar navbar-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Album</strong>
+          </a>
+        </div>
+      </div>
 
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <main role="main">
     <!-- EXERCISE 2
             Create a Jumbotron section with a quick explanation / image of the website
         -->
+        <section class="jumbotron text-center">
+            <div class="container">
+              <h1>Album Collection</h1>
+              <p class="lead text-muted">
+                "The collection below cover albums that I have heard over the years
+                and I've organised it into top favourite albums and top disliked
+                albums."
+              </p>
+              <p>
+                <a href="#favourite_albums" class="btn btn-light my-2">Top Favourite Albums </a>
+                <a href="#disliked_albums" class="btn btn-dark my-2"> Top Disliked Albums</a>
+              </p>
+            </div>
+        </section>
 
     <!-- EXERCISE 3
             Foreach album in the favorite list, place the genre inside a badge
         -->
-
+        <div class="album py-5">
+            <div class="container">
+                <div class="row">
+                <a id="favourite_albums"> <h1>Favourite Albums </h1></a>
+                </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <img
+                      src="adele21.jpg"
+                      class="card-img-top"
+                      alt="Adele 21 album cover"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Adele 21</h5>
+                      <p class="card-text">
+                        This album was inspired by the journey of emotions that Adele experience in her romantic life when her ex-boyfriend left her and got engaged to another woman shortly after.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </p>
+                      <p>Genre: <span class="badge badge-secondary">Soul</span>
+                        <span class="badge badge-secondary">POP</span>
+                        <span class="badge badge-secondary">R&B</span>
+                    </p>
+                    </div>
+                  </div>
+                </div>
+                <div class= col-3 col-sm-4> this has text</div>
+                <div class= col-3 col-sm-4> this has text</div>
+                <div class= col-3 col-sm-4> this has text</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card mb-3">
+                    <img
+                      src="Jesse_McCartney_-_Departure_(Jesse_McCartney_album).jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </p>
+                      <p>Genre: <span class="badge badge-secondary">Soul</span>
+                        <span class="badge badge-secondary">POP</span>
+                        <span class="badge badge-secondary">R&B</span>
+                    </p>
+                    </div>
+                  </div>
+                </div>
+                <div class= col-3 col-sm-4> this has text</div>
+                <div class= col-3 col-sm-4> this has text</div>
+                <div class= col-3 col-sm-4> this has text</div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card mb-3">
+                    <img
+                      src="JoJo_-_Mad_Love_(Official_Album_Cover).png"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a wider card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit
+                        longer.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </p>
+                      <p>Genre: <span class="badge badge-secondary">Soul</span>
+                        <span class="badge badge-secondary">POP</span>
+                        <span class="badge badge-secondary">R&B</span>
+                    </p>
+                    </div>
+                  </div>
+                </div>
+                <div class= col-3 col-sm-4> this has text</div>
+                <div class= col-3 col-sm-4> this has text</div>
+                <div class= col-3 col-sm-4> this has text</div>
+              </div>
+              </div>
+          </div>
     <!-- EXERCISE 4
             Foreach album in the favorite list, use the Bootstrap Card to contain it.
             Use card layouts to format it in the best and more compatible way.
@@ -123,5 +279,6 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
     <!-- EXERCISE 16
             Make every section of the page "collapsable" if the user clicks on the section title
         -->
+    </main>
   </body>
 </html>
