@@ -42,28 +42,68 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
       crossorigin="anonymous"
     ></script>
     <style>
-      /* PREVIOUS STUFF */
-      .album {
-        background-color: #eddcd2;
+            /* PREVIOUS STUFF */
+            .album {
+              background-color: #eddcd2;
+            }
+
+            .card-body {
+              background-color: #ddbea9;
+              color: whitesmoke;
+            }
+
+            .navbar {
+              background-color: #a5a58d;
+            }
+
+            .jumbotron {
+              background-color: #f0efeb;
+            }
+
+            #favourite_albums {
+                color: white;
+            }
+
+            .flip-box {
+              background-color: transparent;
+              flex-shrink: 0;
+              width: 100%
+              vertical-align: middle;
+              perspective: 1000px;
+            }
+
+            .flip-box-inner {
+                position: relative;
+                flex-shrink: 0;
+                width: 100%;
+                text-align: center;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+            }
+
+            .flip-box:hover .flip-box-inner {
+               transform: rotateY(180deg);
+          }
+
+              .flip-box-front, .flip-box-back {
+                  position: absolute;
+                  flex-shrink: 0;
+                  width: 100%;
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+              }
+
+              .flip-box-back {
+        background-color: transparent;
+        color: white;
+        transform: rotateY(180deg);
       }
 
       .card-body {
-        background-color: #ddbea9;
-        color: whitesmoke;
+          margin-top: 250px;
       }
-
-      .navbar {
-        background-color: #a5a58d;
-      }
-
-      .jumbotron {
-        background-color: #f0efeb;
-      }
-
-      #favourite_albums {
-          color: white;
-      }
-    </style>
+      
+      </style>
   </head>
   <body>
     <!-- EXERCISE 1
@@ -86,395 +126,285 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
     </header>
 
     <main role="main">
-    <!-- EXERCISE 2
+      <!-- EXERCISE 2
             Create a Jumbotron section with a quick explanation / image of the website
         -->
-        <section class="jumbotron text-center">
-            <div class="container">
-              <h1>Album Collection</h1>
-              <p class="lead text-muted">
-                "The collection below cover albums that I have heard over the years
-                and I've organised it into top favourite albums and top disliked
-                albums."
-              </p>
-              <p>
-                <a href="#favourite_albums" class="btn btn-light my-2">Top Favourite Albums </a>
-                <a href="#disliked_albums" class="btn btn-dark my-2"> Top Disliked Albums</a>
-              </p>
-            </div>
-        </section>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1>Album Collection</h1>
+          <p class="lead text-muted">
+            "The collection below cover albums that I have heard over the years
+            and I've organised it into top favourite albums and top disliked
+            albums."
+          </p>
+          <p>
+            <a href="#favourite_albums" class="btn btn-light my-2"
+              >Top Favourite Albums
+            </a>
+            <a href="#disliked_albums" class="btn btn-dark my-2">
+              Top Disliked Albums</a
+            >
+          </p>
+        </div>
+      </section>
 
-    <!-- EXERCISE 3
+      <!-- EXERCISE 3
             Foreach album in the favorite list, place the genre inside a badge
         -->
-        <div class="album py-5">
-            <div class="container">
-                <div class="row">
-                <a id="favourite_albums"> <h1>Favourite Albums </h1></a>
-                </div>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card mb-4 shadow-sm">
-                    <img
-                      src="adele21.jpg"
-                      class="card-img-top"
-                      alt="Adele 21 album cover"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Adele 21</h5>
-                      <p class="card-text">
-                        This album was inspired by the journey of emotions that Adele experience in her romantic life when her ex-boyfriend left her and got engaged to another woman shortly after.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </p>
-                      <p>Genre: <span class="badge badge-secondary">Soul</span>
-                        <span class="badge badge-secondary">POP</span>
-                        <span class="badge badge-secondary">R&B</span>
-                    </p>
-                    </div>
-                  </div>
-                </div>
-                <div class= col-8 col-sm-4>
-                    <h2>Title</h2>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    1.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    2.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    3.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    4.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    5.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    6.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    7.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    8.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    9.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    10.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    11.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    duration
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        delete button
-                    </div>
-                    </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card mb-3">
-                    <img
-                      src="Jesse_McCartney_-_Departure_(Jesse_McCartney_album).jpg"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </p>
-                      <p>Genre: <span class="badge badge-secondary">Soul</span>
-                        <span class="badge badge-secondary">POP</span>
-                        <span class="badge badge-secondary">R&B</span>
-                    </p>
-                    </div>
-                  </div>
-                </div>
-                <div class= col-8 col-sm-4>
-                    <h2>Title</h2>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    1.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    </div>
-                    <div class="row">
-                        2
-                    </div>
-                    <div class="row">
-                        3
-                    </div>
-                    <div class="row">
-                        4
-                    </div>
-                    <div class="row">
-                        5
-                    </div>
-                    <div class="row">
-                        6
-                    </div>
-                    <div class="row">
-                        7
-                    </div>
-                    <div class="row">
-                        8
-                    </div>
-                    <div class="row">
-                        9
-                    </div>
-                    <div class="row">
-                        10
-                    </div>
-                    <div class="row">
-                        11
-                    </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card mb-3">
-                    <img
-                      src="JoJo_-_Mad_Love_(Official_Album_Cover).png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-                      </p>
-                      <p class="card-text">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                      </p>
-                      <p>Genre: <span class="badge badge-secondary">Soul</span>
-                        <span class="badge badge-secondary">POP</span>
-                        <span class="badge badge-secondary">R&B</span>
-                    </p>
-                    </div>
-                  </div>
-                </div>
-                <div class= col-8 col-sm-4>
-                    <h2>Title</h2>
-                    <div class="row">
-                        <p>#</p>
-                    <div class="col-3 col-sm-2">
-                    1.
-                    </div>
-                    <div class="col-3 col-sm-2">
-                    
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    <div class="col-3 col-sm-2">
-                        hello
-                    </div>
-                    </div>
-                    <div class="row">
-                        2
-                    </div>
-                    <div class="row">
-                        3
-                    </div>
-                    <div class="row">
-                        4
-                    </div>
-                    <div class="row">
-                        5
-                    </div>
-                    <div class="row">
-                        6
-                    </div>
-                    <div class="row">
-                        7
-                    </div>
-                    <div class="row">
-                        8
-                    </div>
-                    <div class="row">
-                        9
-                    </div>
-                    <div class="row">
-                        10
-                    </div>
-                    <div class="row">
-                        11
-                    </div>
-                </div>
-                </div>
-              </div>
-              </div>
+      <div class="album py-5">
+        <div class="container">
+          <div class="row">
+            <a id="favourite_albums"> <h1>Favourite Albums</h1></a>
           </div>
-    <!-- EXERCISE 4
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-4 shadow-sm">
+                <div class="flip-box">
+                  <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                      <img
+                        src="adele21.jpg"
+                        class="card-img-top img-fluid"
+                        alt="Adele 21 album cover"
+                      />
+                    </div>
+                    <div class="flip-box-back">
+                      <iframe
+                        src="https://open.spotify.com/embed/album/7n3QJc7TBOxXtlYh4Ssll8"
+                        width="379"
+                        height="379"
+                        frameborder="0"
+                        allowtransparency="true"
+                        allow="encrypted-media"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Adele 21</h5>
+                  <p class="card-text">
+                    This album was inspired by the journey of emotions that
+                    Adele experience in her romantic life when her ex-boyfriend
+                    left her and got engaged to another woman shortly after.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                  <p>
+                    Genre: <span class="badge badge-secondary">Soul</span>
+                    <span class="badge badge-secondary">POP</span>
+                    <span class="badge badge-secondary">R&B</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-8" col-sm-4>
+              <h2>Title</h2>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">1.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">2.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">3.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">4.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">5.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">6.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">7.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">8.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">9.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">10.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">11.</div>
+                <div class="col-3 col-sm-2">duration</div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">delete button</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-3">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                <img
+                  src="Jesse_McCartney_-_Departure_(Jesse_McCartney_album).jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                      </div>
+<div class="flip-box-back">
+    <iframe src="https://open.spotify.com/embed/album/5PlXcvtyl5aQfGV9GOdqbY" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                  <p>
+                    Genre: <span class="badge badge-secondary">Soul</span>
+                    <span class="badge badge-secondary">POP</span>
+                    <span class="badge badge-secondary">R&B</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-8" col-sm-4>
+              <h2>Title</h2>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">1.</div>
+                <div class="col-3 col-sm-2"></div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">hello</div>
+              </div>
+              <div class="row">2</div>
+              <div class="row">3</div>
+              <div class="row">4</div>
+              <div class="row">5</div>
+              <div class="row">6</div>
+              <div class="row">7</div>
+              <div class="row">8</div>
+              <div class="row">9</div>
+              <div class="row">10</div>
+              <div class="row">11</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card mb-3">
+                <img
+                  src="JoJo_-_Mad_Love_(Official_Album_Cover).png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                  <p>
+                    Genre: <span class="badge badge-secondary">Soul</span>
+                    <span class="badge badge-secondary">POP</span>
+                    <span class="badge badge-secondary">R&B</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-8" col-sm-4>
+              <h2>Title</h2>
+              <div class="row">
+                <p>#</p>
+                <div class="col-3 col-sm-2">1.</div>
+                <div class="col-3 col-sm-2"></div>
+                <div class="col-3 col-sm-2">hello</div>
+                <div class="col-3 col-sm-2">hello</div>
+              </div>
+              <div class="row">2</div>
+              <div class="row">3</div>
+              <div class="row">4</div>
+              <div class="row">5</div>
+              <div class="row">6</div>
+              <div class="row">7</div>
+              <div class="row">8</div>
+              <div class="row">9</div>
+              <div class="row">10</div>
+              <div class="row">11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- EXERCISE 4
             Foreach album in the favorite list, use the Bootstrap Card to contain it.
             Use card layouts to format it in the best and more compatible way.
         -->
 
-    <!-- EXERCISE 5
+      <!-- EXERCISE 5
             Place the tracklist inside a Bootstrap table.
             The row column must be alternate.
             Use one column for the track order, one of the title and one for the length.
             (If you want, you can also add extra columns)
         -->
 
-    <!-- EXERCISE 6
+      <!-- EXERCISE 6
             Add a DELETE bootstrap button on each row of the tracklist, with appropriate transitions on the various pseudo-class states 
             which will apply for the subsequent button you'll use.
             Clicking on the button the row must disappear. 
             Add a fade-out effect using a CSS transition effect
         -->
 
-    <!-- EXERCISE 7
+      <!-- EXERCISE 7
             Add a "Contact Me" form in the footer.
             The "Contact Me" form has 2 fields:
             - Email
@@ -482,15 +412,15 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             Use the correct Bootstrap styles for styling the buttons
         -->
 
-    <!-- EXERCISE 8 
+      <!-- EXERCISE 8 
             Add to the footer an extra column with the same links of the top nav.
         -->
 
-    <!-- EXERCISE 9
+      <!-- EXERCISE 9
             Add a button "Add Track" under the track list the album, add a nice shadow transition when the button is hovered
         -->
 
-    <!-- EXERCISE 10
+      <!-- EXERCISE 10
             On "Add Track" button, open a new modal.
             The modal shall contain a form with:
             - Track number
@@ -501,7 +431,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             The fields should be inside an Input Group and divided in 2 columns.
         -->
 
-    <!-- EXERCISE 11
+      <!-- EXERCISE 11
             Add 2 bootstrap buttons at the bottom of the modal window:
             - Close => clear the fields and close the modal
             - Add => Add the track to the list of tracks in the main page and display an alert success message 
@@ -511,28 +441,28 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             https://www.w3schools.com/jsref/met_win_settimeout.asp
         -->
 
-    <!-- EXERCISE 12
+      <!-- EXERCISE 12
             All the field (except for Feat. and Live Track) are required fields and requires validation.
             If the user clicks on the Add button and some fields are empty, a warning alert must be show
         -->
 
-    <!-- ############### -->
-    <!-- ###  EXTRA  ### -->
-    <!-- ############### -->
+      <!-- ############### -->
+      <!-- ###  EXTRA  ### -->
+      <!-- ############### -->
 
-    <!-- EXERCISE 13
+      <!-- EXERCISE 13
             For each "Album cover" in your page, add a tooltip with the title
         -->
 
-    <!-- EXERCISE 14
+      <!-- EXERCISE 14
             Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
         -->
 
-    <!-- EXERCISE 15
+      <!-- EXERCISE 15
             Add a Album Carousel with controls to display the top 10 albums
         -->
 
-    <!-- EXERCISE 16
+      <!-- EXERCISE 16
             Make every section of the page "collapsable" if the user clicks on the section title
         -->
     </main>
